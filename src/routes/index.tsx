@@ -76,13 +76,26 @@ const stats = [
 ] as const;
 
 const marquee = [
-  "Business Strategy",
+  "Marketing Agency",
   "AI Automation",
+  "Digital Products",
+  "Physical Services",
   "SaaS Products",
+  "System Builder",
+  "Business Strategy",
   "Agency Systems",
   "Founder Mindset",
-  "Growth Roadmaps",
 ];
+
+const workAreas = [
+  ["Marketing Agency", "Offer, funnel, content and paid — a full client-getting machine, not random posts."],
+  ["AI Automation", "n8n / Make / GPT workflows that handle leads, replies, reports and content."],
+  ["Digital Products", "Courses, templates, notion systems and paid communities that sell while you sleep."],
+  ["Physical Services", "Local and service businesses: booking systems, follow-up flows and reviews on autopilot."],
+  ["SaaS Products", "From validated idea to MVP to first paying subscribers."],
+  ["System Builder", "SOPs, dashboards and automations so the business runs without you in every step."],
+];
+
 
 function Index() {
   return (
