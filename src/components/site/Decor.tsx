@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export function Sparkle({ className = "", delay = 0 }: { className?: string; delay?: number }) {
   return (
