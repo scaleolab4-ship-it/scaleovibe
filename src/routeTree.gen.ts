@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgencyBuilderRouteImport } from './routes/agency-builder'
 import { Route as AiAutomationRouteImport } from './routes/ai-automation'
+import { Route as BookingRouteImport } from './routes/booking'
 import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
 import { Route as MindsetRouteImport } from './routes/mindset'
 import { Route as SaasRouteImport } from './routes/saas'
@@ -29,6 +30,11 @@ const AgencyBuilderRoute = AgencyBuilderRouteImport.update({
 const AiAutomationRoute = AiAutomationRouteImport.update({
   id: '/ai-automation',
   path: '/ai-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingRoute = BookingRouteImport.update({
+  id: '/booking',
+  path: '/booking',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
+  '/booking': typeof BookingRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
+  '/booking': typeof BookingRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
+  '/booking': typeof BookingRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-builder'
     | '/ai-automation'
+    | '/booking'
     | '/business-strategy'
     | '/mindset'
     | '/saas'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-builder'
     | '/ai-automation'
+    | '/booking'
     | '/business-strategy'
     | '/mindset'
     | '/saas'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agency-builder'
     | '/ai-automation'
+    | '/booking'
     | '/business-strategy'
     | '/mindset'
     | '/saas'
@@ -103,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgencyBuilderRoute: typeof AgencyBuilderRoute
   AiAutomationRoute: typeof AiAutomationRoute
+  BookingRoute: typeof BookingRoute
   BusinessStrategyRoute: typeof BusinessStrategyRoute
   MindsetRoute: typeof MindsetRoute
   SaasRoute: typeof SaasRoute
@@ -129,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-automation'
       fullPath: '/ai-automation'
       preLoaderRoute: typeof AiAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/booking': {
+      id: '/booking'
+      path: '/booking'
+      fullPath: '/booking'
+      preLoaderRoute: typeof BookingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/business-strategy': {
@@ -159,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgencyBuilderRoute: AgencyBuilderRoute,
   AiAutomationRoute: AiAutomationRoute,
+  BookingRoute: BookingRoute,
   BusinessStrategyRoute: BusinessStrategyRoute,
   MindsetRoute: MindsetRoute,
   SaasRoute: SaasRoute,
