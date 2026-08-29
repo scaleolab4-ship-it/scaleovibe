@@ -124,6 +124,15 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
 
 @layer base {
   * {
