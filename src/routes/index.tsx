@@ -97,7 +97,7 @@ function Index() {
             className="relative mx-auto w-full max-w-xl"
           >
             <div className="absolute inset-0 -z-10 mx-auto size-64 rounded-full bg-primary/25 blur-[90px]" />
-            <LogoMark className="mx-auto w-full max-w-md animate-float-slow" />
+            <LogoLockup className="mx-auto h-auto w-full max-w-lg animate-float-slow" />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
           </motion.div>
