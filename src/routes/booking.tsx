@@ -41,9 +41,8 @@ const times = ["10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM", "06:00 PM", "08:0
 
 function Page() {
   const { interest: initialInterest } = Route.useSearch();
-  const [interest, setInterest] = useState(
-    interests.includes(initialInterest) ? initialInterest : initialInterest || interests[0],
-  );
+  const [interest, setInterest] = useState(initialInterest || interests[0]);
+
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [date, setDate] = useState("");
