@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import {
   Sparkles,
   Target,
@@ -275,15 +274,14 @@ function Index() {
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </span>
                     <Sparkle className="absolute bottom-4 right-4 size-4" delay={i * 0.3} />
-                  </motion.div>
+                  </div>
                 </Link>
               </Reveal>
             ))}
             <Reveal delay={0.4}>
               <Link to="/booking" className="group block h-full">
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-brand-gradient p-6 text-primary-foreground shadow-brand"
+                <div
+                  className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-brand-gradient p-6 text-primary-foreground shadow-brand transition-transform duration-300 group-hover:-translate-y-1.5"
                 >
                   <Sparkles className="size-8" />
                   <div>
@@ -295,7 +293,7 @@ function Index() {
                   <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold">
                     Start now <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </motion.div>
+                </div>
               </Link>
             </Reveal>
           </div>
