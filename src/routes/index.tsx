@@ -12,7 +12,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
-import { LogoMark } from "@/components/site/Logo";
+import { LogoMark, LogoLockup } from "@/components/site/Logo";
 import { CONTACT_EMAIL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
