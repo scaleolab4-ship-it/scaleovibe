@@ -6,9 +6,10 @@ import { Reveal, Sparkle } from "@/components/site/Decor";
 import { CONTACT_EMAIL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/booking")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    interest: typeof search.interest === "string" ? search.interest : "",
+  validateSearch: (search: Record<string, unknown>): { interest?: string } => ({
+    interest: typeof search["interest"] === "string" ? search["interest"] : undefined,
   }),
+
   head: () => ({
     meta: [
       { title: "Book a Call — scaleo_lab" },
