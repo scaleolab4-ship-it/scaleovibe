@@ -103,42 +103,31 @@ function Index() {
       {/* HERO */}
       <section className="relative px-4 pb-16 pt-12 sm:pt-20">
         <div className="mx-auto max-w-5xl text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, filter: "blur(14px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="relative mx-auto w-full max-w-xl"
-          >
+          <div className="animate-rise relative mx-auto w-full max-w-xl">
             <div className="absolute inset-0 -z-10 mx-auto size-64 rounded-full bg-primary/25 blur-[90px]" />
             <LogoLockup className="mx-auto h-auto w-full max-w-lg animate-float-slow" />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-4 text-4xl font-extrabold leading-tight sm:text-6xl"
+          <h1
+            className="animate-rise mt-4 text-4xl font-extrabold leading-tight sm:text-6xl"
+            style={{ animationDelay: "0.15s" }}
           >
             We scale brands with <span className="text-brand-gradient">systems, AI & strategy</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.28 }}
-            className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
+          <p
+            className="animate-rise mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
+            style={{ animationDelay: "0.28s" }}
           >
-            scaleo_lab is a small, fast business agency — business strategy, AI automation, SaaS
-            products and agency systems, all in one lab.
-          </motion.p>
+            scaleo_lab is a small, fast lab for marketing agency work, AI automation, digital
+            products, physical services, SaaS products and system building.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3"
+          <div
+            className="animate-rise mt-8 flex flex-wrap items-center justify-center gap-3"
+            style={{ animationDelay: "0.4s" }}
           >
             <Link
               to="/booking"
@@ -152,7 +141,8 @@ function Index() {
             >
               <Mail className="size-4 text-primary" /> Email us
             </a>
-          </motion.div>
+          </div>
+
 
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {stats.map((s, i) => (
