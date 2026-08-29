@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgencyBuilderRouteImport } from './routes/agency-builder'
 import { Route as AiAutomationRouteImport } from './routes/ai-automation'
 import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
+import { Route as MindsetRouteImport } from './routes/mindset'
 import { Route as SaasRouteImport } from './routes/saas'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
   path: '/business-strategy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MindsetRoute = MindsetRouteImport.update({
+  id: '/mindset',
+  path: '/mindset',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SaasRoute = SaasRouteImport.update({
   id: '/saas',
   path: '/saas',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
+  '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
+  '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
 }
 export interface FileRoutesById {
@@ -61,21 +69,33 @@ export interface FileRoutesById {
   '/agency-builder': typeof AgencyBuilderRoute
   '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
+  '/mindset': typeof MindsetRoute
   '/saas': typeof SaasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/agency-builder' | '/ai-automation' | '/business-strategy' | '/saas'
+    | '/'
+    | '/agency-builder'
+    | '/ai-automation'
+    | '/business-strategy'
+    | '/mindset'
+    | '/saas'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/agency-builder' | '/ai-automation' | '/business-strategy' | '/saas'
+    | '/'
+    | '/agency-builder'
+    | '/ai-automation'
+    | '/business-strategy'
+    | '/mindset'
+    | '/saas'
   id:
     | '__root__'
     | '/'
     | '/agency-builder'
     | '/ai-automation'
     | '/business-strategy'
+    | '/mindset'
     | '/saas'
   fileRoutesById: FileRoutesById
 }
@@ -84,6 +104,7 @@ export interface RootRouteChildren {
   AgencyBuilderRoute: typeof AgencyBuilderRoute
   AiAutomationRoute: typeof AiAutomationRoute
   BusinessStrategyRoute: typeof BusinessStrategyRoute
+  MindsetRoute: typeof MindsetRoute
   SaasRoute: typeof SaasRoute
 }
 
@@ -117,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessStrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mindset': {
+      id: '/mindset'
+      path: '/mindset'
+      fullPath: '/mindset'
+      preLoaderRoute: typeof MindsetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/saas': {
       id: '/saas'
       path: '/saas'
@@ -132,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgencyBuilderRoute: AgencyBuilderRoute,
   AiAutomationRoute: AiAutomationRoute,
   BusinessStrategyRoute: BusinessStrategyRoute,
+  MindsetRoute: MindsetRoute,
   SaasRoute: SaasRoute,
 }
 export const routeTree = rootRouteImport
