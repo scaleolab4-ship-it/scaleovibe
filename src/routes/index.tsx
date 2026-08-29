@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import {
   Sparkles,
   Target,
@@ -12,7 +11,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
-import { LogoMark } from "@/components/site/Logo";
+import { LogoMark, LogoLockup } from "@/components/site/Logo";
 import { CONTACT_EMAIL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -76,13 +75,26 @@ const stats = [
 ] as const;
 
 const marquee = [
-  "Business Strategy",
+  "Marketing Agency",
   "AI Automation",
+  "Digital Products",
+  "Physical Services",
   "SaaS Products",
+  "System Builder",
+  "Business Strategy",
   "Agency Systems",
   "Founder Mindset",
-  "Growth Roadmaps",
 ];
+
+const workAreas = [
+  ["Marketing Agency", "Offer, funnel, content and paid — a full client-getting machine, not random posts."],
+  ["AI Automation", "n8n / Make / GPT workflows that handle leads, replies, reports and content."],
+  ["Digital Products", "Courses, templates, notion systems and paid communities that sell while you sleep."],
+  ["Physical Services", "Local and service businesses: booking systems, follow-up flows and reviews on autopilot."],
+  ["SaaS Products", "From validated idea to MVP to first paying subscribers."],
+  ["System Builder", "SOPs, dashboards and automations so the business runs without you in every step."],
+];
+
 
 function Index() {
   return (
@@ -90,42 +102,31 @@ function Index() {
       {/* HERO */}
       <section className="relative px-4 pb-16 pt-12 sm:pt-20">
         <div className="mx-auto max-w-5xl text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, filter: "blur(14px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="relative mx-auto w-full max-w-xl"
-          >
+          <div className="animate-rise relative mx-auto w-full max-w-xl">
             <div className="absolute inset-0 -z-10 mx-auto size-64 rounded-full bg-primary/25 blur-[90px]" />
-            <LogoMark className="mx-auto w-full max-w-md animate-float-slow" />
+            <LogoLockup className="mx-auto h-auto w-full max-w-lg animate-float-slow" />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-4 text-4xl font-extrabold leading-tight sm:text-6xl"
+          <h1
+            className="animate-rise mt-4 text-4xl font-extrabold leading-tight sm:text-6xl"
+            style={{ animationDelay: "0.15s" }}
           >
             We scale brands with <span className="text-brand-gradient">systems, AI & strategy</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.28 }}
-            className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
+          <p
+            className="animate-rise mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
+            style={{ animationDelay: "0.28s" }}
           >
-            scaleo_lab is a small, fast business agency — business strategy, AI automation, SaaS
-            products and agency systems, all in one lab.
-          </motion.p>
+            scaleo_lab is a small, fast lab for marketing agency work, AI automation, digital
+            products, physical services, SaaS products and system building.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3"
+          <div
+            className="animate-rise mt-8 flex flex-wrap items-center justify-center gap-3"
+            style={{ animationDelay: "0.4s" }}
           >
             <Link
               to="/booking"
@@ -139,7 +140,8 @@ function Index() {
             >
               <Mail className="size-4 text-primary" /> Email us
             </a>
-          </motion.div>
+          </div>
+
 
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {stats.map((s, i) => (
@@ -186,16 +188,31 @@ function Index() {
                     Founder
                   </span>
                   <h3 className="mt-3 font-display text-3xl font-extrabold">
-                    Yeasin <span className="text-brand-gradient">— scaleo_lab</span>
+                    YEASIN <span className="text-brand-gradient">— scaleo_lab</span>
                   </h3>
+                  <p className="mt-1 text-sm font-semibold tracking-[0.35em] text-primary">
+                    Y · E · A · S · I · N
+                  </p>
                   <p className="mt-3 max-w-xl text-muted-foreground">
                     For the last <strong className="text-foreground">2 years</strong> I've been
-                    working in business, AI, agency and SaaS — starting with AI automation, then
-                    growing into full business systems. I build offers, automate the boring work and
-                    turn ideas into products that actually sell.
+                    working across <strong className="text-foreground">marketing agency</strong>,{" "}
+                    <strong className="text-foreground">AI automation</strong>,{" "}
+                    <strong className="text-foreground">digital products</strong>,{" "}
+                    <strong className="text-foreground">physical services</strong>,{" "}
+                    <strong className="text-foreground">SaaS products</strong> and{" "}
+                    <strong className="text-foreground">system building</strong> — starting from AI
+                    automation, then growing into full business systems. I build offers, automate the
+                    boring work and turn ideas into products that actually sell.
                   </p>
                   <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
-                    {["Business", "AI Automation", "Agency", "SaaS"].map((t) => (
+                    {[
+                      "Marketing Agency",
+                      "AI Automation",
+                      "Digital Products",
+                      "Physical Services",
+                      "SaaS",
+                      "System Builder",
+                    ].map((t) => (
                       <span
                         key={t}
                         className="rounded-full border border-primary/20 bg-card/70 px-3 py-1 text-xs font-semibold text-primary"
@@ -208,8 +225,29 @@ function Index() {
               </div>
             </div>
           </Reveal>
+
+          {/* WHAT I WORK WITH */}
+          <div className="mt-16">
+            <SectionTitle
+              eyebrow="Areas"
+              title="What I actually work with"
+              subtitle="Not just business — six connected areas, one system."
+            />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {workAreas.map(([t, d], i) => (
+                <Reveal key={t} delay={i * 0.06}>
+                  <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6">
+                    <h4 className="font-display text-base font-extrabold">{t}</h4>
+                    <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+                    <Sparkle className="absolute right-4 top-4 size-4" delay={i * 0.25} />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* SERVICES */}
       <section className="px-4 pb-4">
@@ -223,11 +261,8 @@ function Index() {
             {services.map((s, i) => (
               <Reveal key={s.to} delay={i * 0.07}>
                 <Link to={s.to} className="group block h-full">
-                  <motion.div
-                    whileHover={{ y: -6 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="glass-card relative h-full overflow-hidden rounded-3xl p-6"
-                  >
+                  <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6 transition-transform duration-300 group-hover:-translate-y-1.5">
+
                     <div className="absolute -right-10 -top-10 size-32 rounded-full bg-primary/20 blur-2xl transition-opacity duration-300 group-hover:opacity-100 sm:opacity-60" />
                     <div className="relative flex size-12 items-center justify-center rounded-2xl bg-brand-gradient text-primary-foreground shadow-brand">
                       <s.icon className="size-6" />
@@ -239,15 +274,14 @@ function Index() {
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </span>
                     <Sparkle className="absolute bottom-4 right-4 size-4" delay={i * 0.3} />
-                  </motion.div>
+                  </div>
                 </Link>
               </Reveal>
             ))}
             <Reveal delay={0.4}>
               <Link to="/booking" className="group block h-full">
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-brand-gradient p-6 text-primary-foreground shadow-brand"
+                <div
+                  className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-brand-gradient p-6 text-primary-foreground shadow-brand transition-transform duration-300 group-hover:-translate-y-1.5"
                 >
                   <Sparkles className="size-8" />
                   <div>
@@ -259,7 +293,7 @@ function Index() {
                   <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold">
                     Start now <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </motion.div>
+                </div>
               </Link>
             </Reveal>
           </div>
