@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiAutomationRouteImport } from './routes/ai-automation'
 import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiAutomationRoute = AiAutomationRouteImport.update({
+  id: '/ai-automation',
+  path: '/ai-automation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
@@ -25,27 +31,31 @@ const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-automation': typeof AiAutomationRoute
   '/business-strategy': typeof BusinessStrategyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/business-strategy'
+  fullPaths: '/' | '/ai-automation' | '/business-strategy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/business-strategy'
-  id: '__root__' | '/' | '/business-strategy'
+  to: '/' | '/ai-automation' | '/business-strategy'
+  id: '__root__' | '/' | '/ai-automation' | '/business-strategy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiAutomationRoute: typeof AiAutomationRoute
   BusinessStrategyRoute: typeof BusinessStrategyRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-automation': {
+      id: '/ai-automation'
+      path: '/ai-automation'
+      fullPath: '/ai-automation'
+      preLoaderRoute: typeof AiAutomationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/business-strategy': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiAutomationRoute: AiAutomationRoute,
   BusinessStrategyRoute: BusinessStrategyRoute,
 }
 export const routeTree = rootRouteImport
