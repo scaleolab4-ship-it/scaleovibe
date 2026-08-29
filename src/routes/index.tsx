@@ -199,16 +199,31 @@ function Index() {
                     Founder
                   </span>
                   <h3 className="mt-3 font-display text-3xl font-extrabold">
-                    Yeasin <span className="text-brand-gradient">— scaleo_lab</span>
+                    YEASIN <span className="text-brand-gradient">— scaleo_lab</span>
                   </h3>
+                  <p className="mt-1 text-sm font-semibold tracking-[0.35em] text-primary">
+                    Y · E · A · S · I · N
+                  </p>
                   <p className="mt-3 max-w-xl text-muted-foreground">
                     For the last <strong className="text-foreground">2 years</strong> I've been
-                    working in business, AI, agency and SaaS — starting with AI automation, then
-                    growing into full business systems. I build offers, automate the boring work and
-                    turn ideas into products that actually sell.
+                    working across <strong className="text-foreground">marketing agency</strong>,{" "}
+                    <strong className="text-foreground">AI automation</strong>,{" "}
+                    <strong className="text-foreground">digital products</strong>,{" "}
+                    <strong className="text-foreground">physical services</strong>,{" "}
+                    <strong className="text-foreground">SaaS products</strong> and{" "}
+                    <strong className="text-foreground">system building</strong> — starting from AI
+                    automation, then growing into full business systems. I build offers, automate the
+                    boring work and turn ideas into products that actually sell.
                   </p>
                   <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
-                    {["Business", "AI Automation", "Agency", "SaaS"].map((t) => (
+                    {[
+                      "Marketing Agency",
+                      "AI Automation",
+                      "Digital Products",
+                      "Physical Services",
+                      "SaaS",
+                      "System Builder",
+                    ].map((t) => (
                       <span
                         key={t}
                         className="rounded-full border border-primary/20 bg-card/70 px-3 py-1 text-xs font-semibold text-primary"
@@ -221,8 +236,29 @@ function Index() {
               </div>
             </div>
           </Reveal>
+
+          {/* WHAT I WORK WITH */}
+          <div className="mt-16">
+            <SectionTitle
+              eyebrow="Areas"
+              title="What I actually work with"
+              subtitle="Not just business — six connected areas, one system."
+            />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {workAreas.map(([t, d], i) => (
+                <Reveal key={t} delay={i * 0.06}>
+                  <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6">
+                    <h4 className="font-display text-base font-extrabold">{t}</h4>
+                    <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+                    <Sparkle className="absolute right-4 top-4 size-4" delay={i * 0.25} />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* SERVICES */}
       <section className="px-4 pb-4">
