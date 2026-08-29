@@ -262,11 +262,8 @@ function Index() {
             {services.map((s, i) => (
               <Reveal key={s.to} delay={i * 0.07}>
                 <Link to={s.to} className="group block h-full">
-                  <motion.div
-                    whileHover={{ y: -6 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="glass-card relative h-full overflow-hidden rounded-3xl p-6"
-                  >
+                  <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6 transition-transform duration-300 group-hover:-translate-y-1.5">
+
                     <div className="absolute -right-10 -top-10 size-32 rounded-full bg-primary/20 blur-2xl transition-opacity duration-300 group-hover:opacity-100 sm:opacity-60" />
                     <div className="relative flex size-12 items-center justify-center rounded-2xl bg-brand-gradient text-primary-foreground shadow-brand">
                       <s.icon className="size-6" />
