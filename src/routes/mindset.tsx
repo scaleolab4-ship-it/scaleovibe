@@ -63,7 +63,7 @@ function Page() {
         <SectionTitle
           eyebrow="Daily"
           title="A founder day that compounds"
-          description="Three blocks. Nothing complicated, just protected."
+          subtitle="Three blocks. Nothing complicated, just protected."
         />
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {routine.map(([t, d], i) => (

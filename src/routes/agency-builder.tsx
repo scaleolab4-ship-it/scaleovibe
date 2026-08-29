@@ -65,7 +65,7 @@ function Page() {
         <SectionTitle
           eyebrow="Team"
           title="The only four roles you need early"
-          description="Keep it small. Each role removes one bottleneck."
+          subtitle="Keep it small. Each role removes one bottleneck."
         />
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {roles.map(([r, d], i) => (
