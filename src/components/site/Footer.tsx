@@ -4,6 +4,9 @@ import { LogoMark } from "./Logo";
 import { Sparkle } from "./Decor";
 
 export const CONTACT_EMAIL = "scaleo.lab4@gmail.com";
+export const INSTAGRAM_HANDLE = "scale.up07";
+export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
+export const FOUNDER_NAME = "YASHIN";
 
 export function Footer() {
   return (
@@ -81,12 +84,14 @@ export function Footer() {
               <Mail className="size-4 text-primary" /> {CONTACT_EMAIL}
             </a>
             <a
-              href="https://instagram.com/scaleo_lab"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
+              aria-label={`Chat with scaleo_lab on Instagram: @${INSTAGRAM_HANDLE}`}
               className="mt-3 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
             >
-              <Instagram className="size-4" /> @scaleo_lab <ArrowUpRight className="size-3" />
+              <Instagram className="size-4" /> @{INSTAGRAM_HANDLE}{" "}
+              <ArrowUpRight className="size-3" />
             </a>
           </div>
         </div>
