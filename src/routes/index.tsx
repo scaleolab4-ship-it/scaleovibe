@@ -210,7 +210,10 @@ function Index() {
               <div className="relative flex flex-col items-center gap-7 sm:flex-row sm:items-center">
                 <div className="relative shrink-0">
                   <div className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-2xl" />
-                  <LogoMark className="size-40 animate-float" />
+                  <span className="absolute inset-[-10%] rounded-full border border-primary/15" />
+                  <span className="absolute inset-[-20%] animate-spin-slow rounded-full border border-dashed border-primary/15" />
+                  <LogoMark className="size-36 animate-float sm:size-40" />
+                  <LiquidCharacter className="absolute -right-6 -top-8 w-16" />
                   <CharacterBadge
                     name="teacher"
                     className="absolute -bottom-3 -left-4 size-16"
