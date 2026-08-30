@@ -22,7 +22,11 @@ export function WelcomeChime() {
       const ctx = new Ctx();
       if (ctx.state === "suspended") {
         void ctx.resume();
-        if (ctx.state === "suspended") return false;
+        if (ctx.state === "suspended") {
+          // Autoplay is blocked (iOS Safari, Chrome): wait for a real gesture.
+          void ctx.close();
+          return false;
+        }
       }
 
       const master = ctx.createGain();
