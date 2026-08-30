@@ -188,6 +188,18 @@ function Index() {
         </div>
       </div>
 
+      {/* POSTERS */}
+      <section className="px-4 pt-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle
+            eyebrow="What this is"
+            title="The business, in three posters"
+            subtitle="Grow the numbers, automate the boring, ship real products."
+          />
+          <PosterGrid />
+        </div>
+      </section>
+
       {/* FOUNDER */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-5xl">
