@@ -14,11 +14,12 @@ import {
   ShieldCheck,
   Rocket,
   Zap,
+  Instagram,
 } from "lucide-react";
 import { PageHero } from "@/components/site/PageShell";
 import { Reveal, Sparkle } from "@/components/site/Decor";
 import { CharacterBadge } from "@/components/site/Characters";
-import { CONTACT_EMAIL } from "@/components/site/Footer";
+import { CONTACT_EMAIL, FOUNDER_NAME, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/booking")({
   validateSearch: (search: Record<string, unknown>): { interest?: string | undefined } => ({
@@ -103,7 +104,7 @@ function Page() {
   const body = useMemo(
     () =>
       [
-        `Hi Yeasin,`,
+        `Hi ${FOUNDER_NAME},`,
         ``,
         `I'd like to book a call with scaleo_lab.`,
         ``,
@@ -369,8 +370,18 @@ function Page() {
                   </button>
                 </div>
 
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Chat on Instagram @${INSTAGRAM_HANDLE}`}
+                  className="mt-3 flex items-center justify-center gap-2 rounded-full border border-primary/25 bg-card/70 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <Instagram className="size-4" /> Or chat on Instagram @{INSTAGRAM_HANDLE}
+                </a>
+
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Replies usually land within 24 hours.
+                  Replies usually land within 24 hours — email or Instagram DM.
                 </p>
               </div>
 

@@ -22,7 +22,11 @@ export function WelcomeChime() {
       const ctx = new Ctx();
       if (ctx.state === "suspended") {
         void ctx.resume();
-        if (ctx.state === "suspended") return false;
+        if (ctx.state === "suspended") {
+          // Autoplay is blocked (iOS Safari, Chrome): wait for a real gesture.
+          void ctx.close();
+          return false;
+        }
       }
 
       const master = ctx.createGain();
@@ -57,14 +61,21 @@ export function WelcomeChime() {
       const once = () => {
         if (play()) cleanup();
       };
+      const events = [
+        "pointerdown",
+        "touchstart",
+        "touchend",
+        "click",
+        "keydown",
+        "wheel",
+        "scroll",
+      ] as const;
       const cleanup = () => {
-        window.removeEventListener("pointerdown", once);
-        window.removeEventListener("keydown", once);
-        window.removeEventListener("scroll", once);
+        events.forEach((ev) => window.removeEventListener(ev, once));
       };
-      window.addEventListener("pointerdown", once, { once: false });
-      window.addEventListener("keydown", once, { once: false });
-      window.addEventListener("scroll", once, { once: false });
+      events.forEach((ev) =>
+        window.addEventListener(ev, once, { passive: true } as AddEventListenerOptions),
+      );
       return () => {
         disposed = true;
         cleanup();

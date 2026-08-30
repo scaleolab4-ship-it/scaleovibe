@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, Instagram } from "lucide-react";
 import { LogoWordmark, LogoMark } from "./Logo";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "./Footer";
 
 const links = [
   { to: "/business-strategy", label: "Business Strategy" },

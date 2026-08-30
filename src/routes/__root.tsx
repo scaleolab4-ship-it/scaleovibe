@@ -86,9 +86,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "scaleo_lab by Yeasin — business strategy, AI automation, SaaS builds and agency systems.",
+          "scaleo_lab by YASHIN — business strategy, AI automation, SaaS builds and agency systems.",
       },
-      { name: "author", content: "Yeasin — scaleo_lab" },
+      { name: "author", content: "YASHIN — scaleo_lab" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

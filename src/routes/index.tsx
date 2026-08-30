@@ -13,7 +13,14 @@ import {
 import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
 import { LogoMark, LogoBadge } from "@/components/site/Logo";
 import { CharacterStrip, CharacterBadge } from "@/components/site/Characters";
-import { CONTACT_EMAIL } from "@/components/site/Footer";
+import { LiquidCharacter, PosterGrid } from "@/components/site/Liquid";
+import {
+  CONTACT_EMAIL,
+  FOUNDER_NAME,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+} from "@/components/site/Footer";
+import { Instagram } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,13 +29,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "scaleo_lab is a business agency by Yeasin: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
+          "scaleo_lab is a business agency by YASHIN: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
       },
       { property: "og:title", content: "scaleo_lab — Business, AI Automation & SaaS Studio" },
       {
         property: "og:description",
         content:
-          "Business strategy, AI automation, SaaS builds and agency systems — book a free call with Yeasin.",
+          "Business strategy, AI automation, SaaS builds and agency systems — book a free call with YASHIN.",
       },
     ],
   }),
@@ -103,9 +110,10 @@ function Index() {
       {/* HERO */}
       <section className="relative px-4 pb-16 pt-12 sm:pt-20">
         <div className="mx-auto max-w-5xl text-center">
-          <div className="animate-rise relative mx-auto flex w-full max-w-xl flex-col items-center gap-6">
-            <LogoBadge className="size-40 sm:size-48" />
-            <CharacterStrip />
+          <div className="animate-rise relative mx-auto flex w-full max-w-xl flex-col items-center gap-4">
+            <LiquidCharacter className="w-24 sm:w-32" eager />
+            <LogoBadge className="size-36 sm:size-48" />
+            <CharacterStrip className="mt-2" />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
           </div>
@@ -141,6 +149,15 @@ function Index() {
             >
               <Mail className="size-4 text-primary" /> Email us
             </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat on Instagram @${INSTAGRAM_HANDLE}`}
+              className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-6 py-3 font-semibold backdrop-blur transition-colors hover:bg-primary/10 hover:text-primary"
+            >
+              <Instagram className="size-4 text-primary" /> @{INSTAGRAM_HANDLE}
+            </a>
           </div>
 
 
@@ -171,6 +188,18 @@ function Index() {
         </div>
       </div>
 
+      {/* POSTERS */}
+      <section className="px-4 pt-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle
+            eyebrow="What this is"
+            title="The business, in three posters"
+            subtitle="Grow the numbers, automate the boring, ship real products."
+          />
+          <PosterGrid />
+        </div>
+      </section>
+
       {/* FOUNDER */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-5xl">
@@ -181,7 +210,10 @@ function Index() {
               <div className="relative flex flex-col items-center gap-7 sm:flex-row sm:items-center">
                 <div className="relative shrink-0">
                   <div className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-2xl" />
-                  <LogoMark className="size-40 animate-float" />
+                  <span className="absolute inset-[-10%] rounded-full border border-primary/15" />
+                  <span className="absolute inset-[-20%] animate-spin-slow rounded-full border border-dashed border-primary/15" />
+                  <LogoMark className="size-36 animate-float sm:size-40" />
+                  <LiquidCharacter className="absolute -right-6 -top-8 w-16" />
                   <CharacterBadge
                     name="teacher"
                     className="absolute -bottom-3 -left-4 size-16"
@@ -193,12 +225,20 @@ function Index() {
                   <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Founder
                   </span>
-                  <h3 className="mt-3 font-display text-3xl font-extrabold">
-                    YEASIN <span className="text-brand-gradient">— scaleo_lab</span>
+                  <h3 className="mt-3 font-display text-2xl font-extrabold sm:text-3xl">
+                    {FOUNDER_NAME} <span className="text-brand-gradient">— scaleo_lab</span>
                   </h3>
-                  <p className="mt-1 text-sm font-semibold tracking-[0.35em] text-primary">
-                    Y · E · A · S · I · N
+                  <p className="mt-1 text-xs font-semibold tracking-[0.3em] text-primary sm:text-sm">
+                    {FOUNDER_NAME.split("").join(" · ")}
                   </p>
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-primary/10"
+                  >
+                    <Instagram className="size-4" /> Chat on Instagram @{INSTAGRAM_HANDLE}
+                  </a>
                   <p className="mt-3 max-w-xl text-muted-foreground">
                     For the last <strong className="text-foreground">2 years</strong> I've been
                     working across <strong className="text-foreground">marketing agency</strong>,{" "}
@@ -358,6 +398,15 @@ function Index() {
                 className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-6 py-3 font-semibold backdrop-blur hover:bg-primary/10 hover:text-primary"
               >
                 <Mail className="size-4 text-primary" /> Direct email
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Chat on Instagram @${INSTAGRAM_HANDLE}`}
+                className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-6 py-3 font-semibold backdrop-blur hover:bg-primary/10 hover:text-primary"
+              >
+                <Instagram className="size-4 text-primary" /> Instagram DM
               </a>
             </div>
           </div>
