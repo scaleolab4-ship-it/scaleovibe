@@ -97,7 +97,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary/10 pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} scaleo_lab — Founded by YEASIN.</p>
+          <p>© {new Date().getFullYear()} scaleo_lab — Founded by {FOUNDER_NAME}.</p>
           <p className="flex items-center gap-1">
             Built with <span className="text-primary">♥</span> and systems that scale.
           </p>
