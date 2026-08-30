@@ -110,9 +110,10 @@ function Index() {
       {/* HERO */}
       <section className="relative px-4 pb-16 pt-12 sm:pt-20">
         <div className="mx-auto max-w-5xl text-center">
-          <div className="animate-rise relative mx-auto flex w-full max-w-xl flex-col items-center gap-6">
-            <LogoBadge className="size-40 sm:size-48" />
-            <CharacterStrip />
+          <div className="animate-rise relative mx-auto flex w-full max-w-xl flex-col items-center gap-4">
+            <LiquidCharacter className="w-24 sm:w-32" eager />
+            <LogoBadge className="size-36 sm:size-48" />
+            <CharacterStrip className="mt-2" />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
           </div>
