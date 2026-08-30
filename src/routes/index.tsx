@@ -11,7 +11,8 @@ import {
   Calendar,
 } from "lucide-react";
 import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
-import { LogoMark, LogoLockup } from "@/components/site/Logo";
+import { LogoMark, LogoBadge } from "@/components/site/Logo";
+import { CharacterStrip, CharacterBadge } from "@/components/site/Characters";
 import { CONTACT_EMAIL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -102,9 +103,9 @@ function Index() {
       {/* HERO */}
       <section className="relative px-4 pb-16 pt-12 sm:pt-20">
         <div className="mx-auto max-w-5xl text-center">
-          <div className="animate-rise relative mx-auto w-full max-w-xl">
-            <div className="absolute inset-0 -z-10 mx-auto size-64 rounded-full bg-primary/25 blur-[90px]" />
-            <LogoLockup className="mx-auto h-auto w-full max-w-lg animate-float-slow" />
+          <div className="animate-rise relative mx-auto flex w-full max-w-xl flex-col items-center gap-6">
+            <LogoBadge className="size-40 sm:size-48" />
+            <CharacterStrip />
             <Sparkle className="absolute right-4 top-4 size-8" />
             <Sparkle className="absolute left-2 bottom-6 size-5" delay={1.4} />
           </div>
