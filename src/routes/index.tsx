@@ -225,12 +225,20 @@ function Index() {
                   <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Founder
                   </span>
-                  <h3 className="mt-3 font-display text-3xl font-extrabold">
-                    YEASIN <span className="text-brand-gradient">— scaleo_lab</span>
+                  <h3 className="mt-3 font-display text-2xl font-extrabold sm:text-3xl">
+                    {FOUNDER_NAME} <span className="text-brand-gradient">— scaleo_lab</span>
                   </h3>
-                  <p className="mt-1 text-sm font-semibold tracking-[0.35em] text-primary">
-                    Y · E · A · S · I · N
+                  <p className="mt-1 text-xs font-semibold tracking-[0.3em] text-primary sm:text-sm">
+                    {FOUNDER_NAME.split("").join(" · ")}
                   </p>
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-primary/10"
+                  >
+                    <Instagram className="size-4" /> Chat on Instagram @{INSTAGRAM_HANDLE}
+                  </a>
                   <p className="mt-3 max-w-xl text-muted-foreground">
                     For the last <strong className="text-foreground">2 years</strong> I've been
                     working across <strong className="text-foreground">marketing agency</strong>,{" "}
