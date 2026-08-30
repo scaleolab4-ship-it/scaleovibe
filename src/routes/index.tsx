@@ -149,6 +149,15 @@ function Index() {
             >
               <Mail className="size-4 text-primary" /> Email us
             </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat on Instagram @${INSTAGRAM_HANDLE}`}
+              className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-6 py-3 font-semibold backdrop-blur transition-colors hover:bg-primary/10 hover:text-primary"
+            >
+              <Instagram className="size-4 text-primary" /> @{INSTAGRAM_HANDLE}
+            </a>
           </div>
 
 
