@@ -369,8 +369,18 @@ function Page() {
                   </button>
                 </div>
 
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Chat on Instagram @${INSTAGRAM_HANDLE}`}
+                  className="mt-3 flex items-center justify-center gap-2 rounded-full border border-primary/25 bg-card/70 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <Instagram className="size-4" /> Or chat on Instagram @{INSTAGRAM_HANDLE}
+                </a>
+
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Replies usually land within 24 hours.
+                  Replies usually land within 24 hours — email or Instagram DM.
                 </p>
               </div>
 
