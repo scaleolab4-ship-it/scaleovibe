@@ -13,7 +13,14 @@ import {
 import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
 import { LogoMark, LogoBadge } from "@/components/site/Logo";
 import { CharacterStrip, CharacterBadge } from "@/components/site/Characters";
-import { CONTACT_EMAIL } from "@/components/site/Footer";
+import { LiquidCharacter, PosterGrid } from "@/components/site/Liquid";
+import {
+  CONTACT_EMAIL,
+  FOUNDER_NAME,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+} from "@/components/site/Footer";
+import { Instagram } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
