@@ -18,7 +18,7 @@ import {
 import { PageHero } from "@/components/site/PageShell";
 import { Reveal, Sparkle } from "@/components/site/Decor";
 import { CharacterBadge } from "@/components/site/Characters";
-import { CONTACT_EMAIL } from "@/components/site/Footer";
+import { CONTACT_EMAIL, FOUNDER_NAME, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/booking")({
   validateSearch: (search: Record<string, unknown>): { interest?: string | undefined } => ({
@@ -103,7 +103,7 @@ function Page() {
   const body = useMemo(
     () =>
       [
-        `Hi Yeasin,`,
+        `Hi ${FOUNDER_NAME},`,
         ``,
         `I'd like to book a call with scaleo_lab.`,
         ``,
