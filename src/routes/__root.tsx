@@ -15,6 +15,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { AuroraBackdrop } from "@/components/site/Decor";
 import { Toaster } from "@/components/ui/sonner";
+import { WelcomeChime } from "@/components/site/WelcomeChime";
 
 function NotFoundComponent() {
   return (
@@ -127,6 +128,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <WelcomeChime />
       <AuroraBackdrop />
       <Nav />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
