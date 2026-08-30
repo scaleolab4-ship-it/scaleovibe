@@ -182,6 +182,11 @@ function Index() {
                 <div className="relative shrink-0">
                   <div className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-2xl" />
                   <LogoMark className="size-40 animate-float" />
+                  <CharacterBadge
+                    name="teacher"
+                    className="absolute -bottom-3 -left-4 size-16"
+                    float="animate-float-slow"
+                  />
                   <Sparkle className="absolute -right-1 top-2 size-6" />
                 </div>
                 <div className="text-center sm:text-left">
