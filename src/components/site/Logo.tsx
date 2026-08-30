@@ -2,31 +2,44 @@ import { Link } from "@tanstack/react-router";
 import markSrc from "@/assets/logo-mark.png";
 import fullSrc from "@/assets/logo-full.png";
 
-/** Shaped brand mark — the character + swoosh inside a soft squircle/blob, never a hard square. */
+/** Brand mark: always a clean WHITE CIRCLE badge with the mark centered inside. */
 export function LogoMark({ className = "size-10" }: { className?: string }) {
   return (
     <span
-      className={`${className} relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[42%] bg-gradient-to-br from-card/80 to-primary/10 ring-1 ring-primary/20 backdrop-blur`}
-      aria-hidden="false"
+      className={`${className} relative inline-flex shrink-0 items-center justify-center rounded-full bg-card ring-1 ring-primary/20 shadow-soft`}
     >
-      <span className="absolute inset-0 -z-10 rounded-[42%] bg-primary/20 blur-xl" />
+      <span className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-xl" />
       <img
         src={markSrc}
         alt="scaleo_lab logo"
-        className="size-[86%] object-contain drop-shadow-[0_6px_14px_rgba(220,40,30,0.28)]"
+        className="size-[68%] object-contain"
       />
     </span>
   );
 }
 
-/** Full transparent lockup — use where there is horizontal room. */
-export function LogoLockup({ className = "h-12" }: { className?: string }) {
+/** Big hero badge — white circle, soft ring halo, gentle float. */
+export function LogoBadge({ className = "size-36" }: { className?: string }) {
   return (
-    <img
-      src={fullSrc}
-      alt="scaleo_lab"
-      className={`${className} w-auto object-contain drop-shadow-[0_10px_24px_rgba(220,40,30,0.25)]`}
-    />
+    <span className={`relative inline-flex items-center justify-center ${className}`}>
+      <span className="absolute inset-[-14%] rounded-full border border-primary/20" />
+      <span className="absolute inset-[-26%] rounded-full border border-primary/10 animate-spin-slow" />
+      <span className="absolute inset-0 rounded-full bg-primary/25 blur-2xl" />
+      <span className="relative inline-flex size-full items-center justify-center rounded-full bg-card ring-1 ring-primary/25 shadow-brand animate-float">
+        <img src={fullSrc} alt="scaleo_lab" className="w-[74%] object-contain" />
+      </span>
+    </span>
+  );
+}
+
+/** Full lockup inside a white rounded pill — use where there is horizontal room. */
+export function LogoLockup({ className = "h-14" }: { className?: string }) {
+  return (
+    <span
+      className={`inline-flex items-center justify-center rounded-full bg-card px-6 py-3 ring-1 ring-primary/15 shadow-soft ${className}`}
+    >
+      <img src={fullSrc} alt="scaleo_lab" className="h-full w-auto object-contain" />
+    </span>
   );
 }
 
