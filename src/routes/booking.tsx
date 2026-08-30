@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Rocket,
   Zap,
+  Instagram,
 } from "lucide-react";
 import { PageHero } from "@/components/site/PageShell";
 import { Reveal, Sparkle } from "@/components/site/Decor";

@@ -29,13 +29,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "scaleo_lab is a business agency by Yeasin: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
+          "scaleo_lab is a business agency by YASHIN: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
       },
       { property: "og:title", content: "scaleo_lab — Business, AI Automation & SaaS Studio" },
       {
         property: "og:description",
         content:
-          "Business strategy, AI automation, SaaS builds and agency systems — book a free call with Yeasin.",
+          "Business strategy, AI automation, SaaS builds and agency systems — book a free call with YASHIN.",
       },
     ],
   }),
