@@ -61,14 +61,21 @@ export function WelcomeChime() {
       const once = () => {
         if (play()) cleanup();
       };
+      const events = [
+        "pointerdown",
+        "touchstart",
+        "touchend",
+        "click",
+        "keydown",
+        "wheel",
+        "scroll",
+      ] as const;
       const cleanup = () => {
-        window.removeEventListener("pointerdown", once);
-        window.removeEventListener("keydown", once);
-        window.removeEventListener("scroll", once);
+        events.forEach((ev) => window.removeEventListener(ev, once));
       };
-      window.addEventListener("pointerdown", once, { once: false });
-      window.addEventListener("keydown", once, { once: false });
-      window.addEventListener("scroll", once, { once: false });
+      events.forEach((ev) =>
+        window.addEventListener(ev, once, { passive: true } as AddEventListenerOptions),
+      );
       return () => {
         disposed = true;
         cleanup();
