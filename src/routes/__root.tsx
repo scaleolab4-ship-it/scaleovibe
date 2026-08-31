@@ -132,6 +132,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <WelcomeChime />
+      <ScrollProgress />
       <AuroraBackdrop />
       <Nav />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
@@ -139,7 +140,9 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <BackToTop />
       <Toaster />
     </QueryClientProvider>
   );
 }
+
