@@ -38,6 +38,23 @@ export const Route = createFileRoute("/")({
           "Business strategy, AI automation, SaaS builds and agency systems — book a free call with Yasin.",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "scaleo_vibe",
+          founder: { "@type": "Person", name: "Yasin" },
+          description:
+            "Business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
+          email: "scaleo.lab4@gmail.com",
+          sameAs: ["https://instagram.com/scaleo_vibe.official"],
+          areaServed: "Worldwide",
+        }),
+      },
+    ],
+
   }),
   component: Index,
 });
