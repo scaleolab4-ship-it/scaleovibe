@@ -3,9 +3,9 @@ import rocketSrc from "@/assets/char-rocket.png";
 import ideaSrc from "@/assets/char-idea.png";
 
 export const characters = {
-  teacher: { src: teacherSrc, alt: "scaleo_lab teacher bot mascot" },
-  rocket: { src: rocketSrc, alt: "scaleo_lab rocket mascot" },
-  idea: { src: ideaSrc, alt: "scaleo_lab idea mascot" },
+  teacher: { src: teacherSrc, alt: "scaleo_vibe teacher bot mascot" },
+  rocket: { src: rocketSrc, alt: "scaleo_vibe rocket mascot" },
+  idea: { src: ideaSrc, alt: "scaleo_vibe idea mascot" },
 } as const;
 
 export type CharacterName = keyof typeof characters;

@@ -6,13 +6,13 @@ import { Reveal, Sparkle } from "@/components/site/Decor";
 export const Route = createFileRoute("/ai-automation")({
   head: () => ({
     meta: [
-      { title: "AI Automation & Tools — scaleo_lab" },
+      { title: "AI Automation & Tools — scaleo_vibe" },
       {
         name: "description",
         content:
-          "AI automation workflows plus the exact AI tools scaleo_lab recommends for content, sales and operations.",
+          "AI automation workflows plus the exact AI tools scaleo_vibe recommends for content, sales and operations.",
       },
-      { property: "og:title", content: "AI Automation & Tools — scaleo_lab" },
+      { property: "og:title", content: "AI Automation & Tools — scaleo_vibe" },
       {
         property: "og:description",
         content: "Recommended AI automation tools and workflows that remove manual work.",
@@ -92,7 +92,7 @@ function Page() {
       <PageHero
         eyebrow="AI Automation"
         title="Let AI do the boring 80%"
-        description="These are the exact tools and workflows we use to run scaleo_lab and our clients' back-office."
+        description="These are the exact tools and workflows we use to run scaleo_vibe and our clients' back-office."
       />
 
       <section className="mx-auto mt-8 max-w-5xl px-4">

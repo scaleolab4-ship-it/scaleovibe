@@ -6,16 +6,16 @@ import { Reveal, Sparkle } from "@/components/site/Decor";
 export const Route = createFileRoute("/business-strategy")({
   head: () => ({
     meta: [
-      { title: "Business Strategy — scaleo_lab" },
+      { title: "Business Strategy — scaleo_vibe" },
       {
         name: "description",
         content:
           "Offer design, pricing, positioning and a 90-day growth roadmap for small brands and agencies.",
       },
-      { property: "og:title", content: "Business Strategy — scaleo_lab" },
+      { property: "og:title", content: "Business Strategy — scaleo_vibe" },
       {
         property: "og:description",
-        content: "How scaleo_lab builds offers, pricing and 90-day growth roadmaps.",
+        content: "How scaleo_vibe builds offers, pricing and 90-day growth roadmaps.",
       },
     ],
   }),

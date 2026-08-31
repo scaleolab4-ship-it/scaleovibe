@@ -25,13 +25,13 @@ import { Instagram } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "scaleo_lab — Business, AI Automation & SaaS Studio" },
+      { title: "scaleo_vibe — Business, AI Automation & SaaS Studio" },
       {
         name: "description",
         content:
-          "scaleo_lab is a business agency by YASHIN: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
+          "scaleo_vibe is a business agency by YASHIN: business strategy, AI automation, SaaS product builds, agency systems and founder mindset.",
       },
-      { property: "og:title", content: "scaleo_lab — Business, AI Automation & SaaS Studio" },
+      { property: "og:title", content: "scaleo_vibe — Business, AI Automation & SaaS Studio" },
       {
         property: "og:description",
         content:
@@ -129,7 +129,7 @@ function Index() {
             className="animate-rise mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
             style={{ animationDelay: "0.28s" }}
           >
-            scaleo_lab is a small, fast lab for marketing agency work, AI automation, digital
+            scaleo_vibe is a small, fast lab for marketing agency work, AI automation, digital
             products, physical services, SaaS products and system building.
           </p>
 
@@ -226,7 +226,7 @@ function Index() {
                     Founder
                   </span>
                   <h3 className="mt-3 font-display text-2xl font-extrabold sm:text-3xl">
-                    {FOUNDER_NAME} <span className="text-brand-gradient">— scaleo_lab</span>
+                    {FOUNDER_NAME} <span className="text-brand-gradient">— scaleo_vibe</span>
                   </h3>
                   <p className="mt-1 text-xs font-semibold tracking-[0.3em] text-primary sm:text-sm">
                     {FOUNDER_NAME.split("").join(" · ")}

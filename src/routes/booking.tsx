@@ -28,13 +28,13 @@ export const Route = createFileRoute("/booking")({
 
   head: () => ({
     meta: [
-      { title: "Book a Free Strategy Call — scaleo_lab" },
+      { title: "Book a Free Strategy Call — scaleo_vibe" },
       {
         name: "description",
         content:
-          "Pick your interest, date and time — scaleo_lab writes your booking message automatically and sends it to scaleo.lab4@gmail.com.",
+          "Pick your interest, date and time — scaleo_vibe writes your booking message automatically and sends it to scaleo.lab4@gmail.com.",
       },
-      { property: "og:title", content: "Book a Free Strategy Call — scaleo_lab" },
+      { property: "og:title", content: "Book a Free Strategy Call — scaleo_vibe" },
       {
         property: "og:description",
         content: "Choose a slot, get an auto-written booking message, and send it in one tap.",
@@ -106,7 +106,7 @@ function Page() {
       [
         `Hi ${FOUNDER_NAME},`,
         ``,
-        `I'd like to book a call with scaleo_lab.`,
+        `I'd like to book a call with scaleo_vibe.`,
         ``,
         `Interested in: ${interest}`,
         `Call length: ${duration}`,

@@ -6,13 +6,13 @@ import { Reveal, Sparkle } from "@/components/site/Decor";
 export const Route = createFileRoute("/saas")({
   head: () => ({
     meta: [
-      { title: "How to Build a SaaS Product — scaleo_lab" },
+      { title: "How to Build a SaaS Product — scaleo_vibe" },
       {
         name: "description",
         content:
-          "The scaleo_lab SaaS playbook: validate, build an MVP fast, price it, and get the first paying users.",
+          "The scaleo_vibe SaaS playbook: validate, build an MVP fast, price it, and get the first paying users.",
       },
-      { property: "og:title", content: "How to Build a SaaS Product — scaleo_lab" },
+      { property: "og:title", content: "How to Build a SaaS Product — scaleo_vibe" },
       {
         property: "og:description",
         content: "Idea to paying users — the practical SaaS build path we follow.",

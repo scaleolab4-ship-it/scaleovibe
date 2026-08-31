@@ -5,13 +5,13 @@ import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
 export const Route = createFileRoute("/mindset")({
   head: () => ({
     meta: [
-      { title: "Mindset Builder — scaleo_lab" },
+      { title: "Mindset Builder — scaleo_vibe" },
       {
         name: "description",
         content:
-          "Focus, consistency and decision rules that keep a founder shipping — the scaleo_lab mindset system.",
+          "Focus, consistency and decision rules that keep a founder shipping — the scaleo_vibe mindset system.",
       },
-      { property: "og:title", content: "Mindset Builder — scaleo_lab" },
+      { property: "og:title", content: "Mindset Builder — scaleo_vibe" },
       {
         property: "og:description",
         content: "Simple daily rules that beat motivation: focus, reps, and honest scoreboards.",
