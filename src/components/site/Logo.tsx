@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import markSrc from "@/assets/logo-mark.png";
 import orbSrc from "@/assets/logo-orb.png";
 
 /** Brand mark: dark gradient circle with the white wave-bars mark centered. */
@@ -8,13 +7,8 @@ export function LogoMark({ className = "size-10" }: { className?: string }) {
     <span
       className={`${className} relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full ring-1 ring-primary/30 shadow-soft`}
     >
-      <img src={orbSrc} alt="" aria-hidden className="absolute inset-0 size-full object-cover" />
       <span className="absolute inset-0 -z-10 rounded-full bg-primary/30 blur-xl" />
-      <img
-        src={markSrc}
-        alt="scaleo_vibe logo"
-        className="relative size-[58%] object-contain"
-      />
+      <img src={orbSrc} alt="scaleo_vibe logo" className="relative size-full object-contain" />
     </span>
   );
 }
@@ -27,8 +21,7 @@ export function LogoBadge({ className = "size-36" }: { className?: string }) {
       <span className="absolute inset-[-26%] rounded-full border border-primary-glow/20 animate-spin-slow" />
       <span className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
       <span className="relative inline-flex size-full items-center justify-center overflow-hidden rounded-full ring-1 ring-primary/30 shadow-brand animate-float">
-        <img src={orbSrc} alt="" aria-hidden className="absolute inset-0 size-full object-cover" />
-        <img src={markSrc} alt="scaleo_vibe" className="relative w-[52%] object-contain" />
+        <img src={orbSrc} alt="scaleo_vibe" className="relative size-full object-contain" />
       </span>
     </span>
   );
