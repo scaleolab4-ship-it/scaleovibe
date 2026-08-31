@@ -4,9 +4,9 @@ import { LogoMark } from "./Logo";
 import { Sparkle } from "./Decor";
 
 export const CONTACT_EMAIL = "scaleo.lab4@gmail.com";
-export const INSTAGRAM_HANDLE = "scale.up07";
+export const INSTAGRAM_HANDLE = "scaleo_vibe.official";
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
-export const FOUNDER_NAME = "YASHIN";
+export const FOUNDER_NAME = "Yasin";
 
 export function Footer() {
   return (
