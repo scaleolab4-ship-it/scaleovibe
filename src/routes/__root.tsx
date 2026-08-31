@@ -82,13 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "scaleo_lab — Business, AI Automation & SaaS Studio" },
+      { title: "scaleo_vibe — Business, AI Automation & SaaS Studio" },
       {
         name: "description",
         content:
-          "scaleo_lab by YASHIN — business strategy, AI automation, SaaS builds and agency systems.",
+          "scaleo_vibe by YASHIN — business strategy, AI automation, SaaS builds and agency systems.",
       },
-      { name: "author", content: "YASHIN — scaleo_lab" },
+      { name: "author", content: "YASHIN — scaleo_vibe" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

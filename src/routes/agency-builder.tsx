@@ -5,16 +5,16 @@ import { Reveal, Sparkle, SectionTitle } from "@/components/site/Decor";
 export const Route = createFileRoute("/agency-builder")({
   head: () => ({
     meta: [
-      { title: "Agency Builder — scaleo_lab" },
+      { title: "Agency Builder — scaleo_vibe" },
       {
         name: "description",
         content:
           "Build a lean service agency: pick a niche, package one offer, get clients with outreach, and deliver with systems.",
       },
-      { property: "og:title", content: "Agency Builder — scaleo_lab" },
+      { property: "og:title", content: "Agency Builder — scaleo_vibe" },
       {
         property: "og:description",
-        content: "Niche, offer, outreach, delivery, team — the scaleo_lab agency build path.",
+        content: "Niche, offer, outreach, delivery, team — the scaleo_vibe agency build path.",
       },
     ],
   }),

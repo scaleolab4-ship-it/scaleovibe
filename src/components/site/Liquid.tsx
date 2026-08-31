@@ -15,7 +15,7 @@ export function LiquidCharacter({
   return (
     <img
       src={liquidHero}
-      alt="scaleo_lab liquid character mascot"
+      alt="scaleo_vibe liquid character mascot"
       width={1024}
       height={1024}
       {...(eager ? {} : { loading: "lazy" as const })}

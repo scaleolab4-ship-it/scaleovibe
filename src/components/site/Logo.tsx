@@ -11,7 +11,7 @@ export function LogoMark({ className = "size-10" }: { className?: string }) {
       <span className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-xl" />
       <img
         src={markSrc}
-        alt="scaleo_lab logo"
+        alt="scaleo_vibe logo"
         className="size-[68%] object-contain"
       />
     </span>
@@ -26,7 +26,7 @@ export function LogoBadge({ className = "size-36" }: { className?: string }) {
       <span className="absolute inset-[-26%] rounded-full border border-primary/10 animate-spin-slow" />
       <span className="absolute inset-0 rounded-full bg-primary/25 blur-2xl" />
       <span className="relative inline-flex size-full items-center justify-center rounded-full bg-card ring-1 ring-primary/25 shadow-brand animate-float">
-        <img src={fullSrc} alt="scaleo_lab" className="w-[74%] object-contain" />
+        <img src={fullSrc} alt="scaleo_vibe" className="w-[74%] object-contain" />
       </span>
     </span>
   );
@@ -38,7 +38,7 @@ export function LogoLockup({ className = "h-14" }: { className?: string }) {
     <span
       className={`inline-flex items-center justify-center rounded-full bg-card px-6 py-3 ring-1 ring-primary/15 shadow-soft ${className}`}
     >
-      <img src={fullSrc} alt="scaleo_lab" className="h-full w-auto object-contain" />
+      <img src={fullSrc} alt="scaleo_vibe" className="h-full w-auto object-contain" />
     </span>
   );
 }
@@ -49,7 +49,7 @@ export function LogoWordmark({ className = "" }: { className?: string }) {
       <LogoMark className="size-9 transition-transform duration-300 group-hover:scale-110" />
       <span className="font-display text-xl font-extrabold tracking-tight">
         <span className="text-primary">scaleo</span>
-        <span className="text-ink">_lab</span>
+        <span className="text-ink">_vibe</span>
       </span>
     </Link>
   );

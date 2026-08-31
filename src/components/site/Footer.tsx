@@ -19,7 +19,7 @@ export function Footer() {
               <LogoMark className="size-10" />
               <span className="font-display text-lg font-extrabold">
                 <span className="text-primary">scaleo</span>
-                <span className="text-ink">_lab</span>
+                <span className="text-ink">_vibe</span>
               </span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">
@@ -87,7 +87,7 @@ export function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Chat with scaleo_lab on Instagram: @${INSTAGRAM_HANDLE}`}
+              aria-label={`Chat with scaleo_vibe on Instagram: @${INSTAGRAM_HANDLE}`}
               className="mt-3 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
             >
               <Instagram className="size-4" /> @{INSTAGRAM_HANDLE}{" "}
@@ -97,7 +97,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary/10 pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} scaleo_lab — Founded by {FOUNDER_NAME}.</p>
+          <p>© {new Date().getFullYear()} scaleo_vibe — Founded by {FOUNDER_NAME}.</p>
           <p className="flex items-center gap-1">
             Built with <span className="text-primary">♥</span> and systems that scale.
           </p>
