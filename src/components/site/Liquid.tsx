@@ -1,5 +1,5 @@
 import liquidHero from "@/assets/liquid-hero.png";
-import posterGrowth from "@/assets/poster-growth.jpg";
+import posterGrowth from "@/assets/screen-growth.jpg";
 import posterAutomation from "@/assets/poster-automation.jpg";
 import posterSaas from "@/assets/poster-saas.jpg";
 import { Reveal, Sparkle } from "./Decor";
@@ -28,7 +28,7 @@ export const posters = [
   {
     src: posterGrowth,
     title: "We grow the numbers",
-    text: "Offer, pricing and a 90-day roadmap so growth is a system, not luck.",
+    text: "Real dashboards, real revenue lines — offer, pricing and a 90-day roadmap so growth is a system, not luck.",
   },
   {
     src: posterAutomation,

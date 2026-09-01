@@ -93,9 +93,11 @@ const services = [
 ] as const;
 
 const stats = [
+  { value: "1500+", label: "Visitors so far" },
+  { value: "60+", label: "Calls booked" },
   { value: "2+", label: "Years building" },
   { value: "AI", label: "Automation first" },
-  { value: "SaaS", label: "Product mindset" },
+  { value: "SaaS", label: "Business mindset" },
   { value: "24h", label: "Reply time" },
 ] as const;
 
@@ -103,7 +105,7 @@ const marquee = [
   "Marketing Agency",
   "AI Automation",
   "Digital Products",
-  "Physical Services",
+  "App Builder",
   "SaaS Products",
   "System Builder",
   "Business Strategy",
@@ -115,7 +117,7 @@ const workAreas = [
   ["Marketing Agency", "Offer, funnel, content and paid — a full client-getting machine, not random posts."],
   ["AI Automation", "n8n / Make / GPT workflows that handle leads, replies, reports and content."],
   ["Digital Products", "Courses, templates, notion systems and paid communities that sell while you sleep."],
-  ["Physical Services", "Local and service businesses: booking systems, follow-up flows and reviews on autopilot."],
+  ["App Builder", "Web and mobile apps shipped fast — dashboards, client portals and internal tools."],
   ["SaaS Products", "From validated idea to MVP to first paying subscribers."],
   ["System Builder", "SOPs, dashboards and automations so the business runs without you in every step."],
 ];
@@ -147,7 +149,7 @@ function Index() {
             style={{ animationDelay: "0.28s" }}
           >
             scaleo_vibe is a small, fast lab for marketing agency work, AI automation, digital
-            products, physical services, SaaS products and system building.
+            products, app builds, SaaS products and system building.
           </p>
 
           <div
@@ -261,7 +263,7 @@ function Index() {
                     working across <strong className="text-foreground">marketing agency</strong>,{" "}
                     <strong className="text-foreground">AI automation</strong>,{" "}
                     <strong className="text-foreground">digital products</strong>,{" "}
-                    <strong className="text-foreground">physical services</strong>,{" "}
+                    <strong className="text-foreground">app building</strong>,{" "}
                     <strong className="text-foreground">SaaS products</strong> and{" "}
                     <strong className="text-foreground">system building</strong> — starting from AI
                     automation, then growing into full business systems. I build offers, automate the
@@ -272,7 +274,7 @@ function Index() {
                       "Marketing Agency",
                       "AI Automation",
                       "Digital Products",
-                      "Physical Services",
+                      "App Builder",
                       "SaaS",
                       "System Builder",
                     ].map((t) => (
