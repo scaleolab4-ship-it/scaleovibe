@@ -52,28 +52,28 @@
 :root {
   --radius: 1.25rem;
   /* Logo-matched palette: near-black surface, crimson + deep teal accents */
-  --background: oklch(0.16 0.012 250);
+  --background: oklch(0.205 0.014 250);
   --foreground: oklch(0.97 0.005 250);
   --ink: oklch(0.97 0.005 250);
   --cream: oklch(0.24 0.02 200);
-  --card: oklch(0.21 0.016 240);
+  --card: oklch(0.265 0.018 240);
   --card-foreground: oklch(0.97 0.005 250);
-  --popover: oklch(0.21 0.016 240);
+  --popover: oklch(0.265 0.018 240);
   --popover-foreground: oklch(0.97 0.005 250);
-  --primary: oklch(0.53 0.2 18);
+  --primary: oklch(0.615 0.198 20);
   --primary-foreground: oklch(0.98 0.005 250);
-  --primary-glow: oklch(0.62 0.13 175);
+  --primary-glow: oklch(0.72 0.13 175);
   --secondary: oklch(0.26 0.02 220);
   --secondary-foreground: oklch(0.95 0.006 250);
   --muted: oklch(0.25 0.016 230);
-  --muted-foreground: oklch(0.74 0.014 240);
+  --muted-foreground: oklch(0.845 0.014 240);
   --accent: oklch(0.45 0.09 178);
   --accent-foreground: oklch(0.97 0.005 250);
   --destructive: oklch(0.55 0.21 20);
   --destructive-foreground: oklch(0.98 0.003 250);
-  --border: oklch(0.32 0.02 230);
+  --border: oklch(0.38 0.022 230);
   --input: oklch(0.32 0.02 230);
-  --ring: oklch(0.53 0.2 18);
+  --ring: oklch(0.615 0.198 20);
 
   --gradient-brand: linear-gradient(135deg, var(--primary-glow), var(--primary));
   --gradient-soft: linear-gradient(180deg, var(--card), var(--background));
@@ -197,6 +197,19 @@
   from { background-position: -200% 0; }
   to { background-position: 200% 0; }
 }
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.55; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@keyframes drift {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  33% { transform: translate3d(22px,-18px,0) scale(1.06); }
+  66% { transform: translate3d(-16px,14px,0) scale(0.96); }
+}
+@keyframes ring-spin {
+  to { transform: rotate(360deg); }
+}
 @keyframes orbit {
   from { transform: rotate(0deg) translateX(46px) rotate(0deg); }
   to { transform: rotate(360deg) translateX(46px) rotate(-360deg); }
@@ -207,10 +220,39 @@
   --animate-pop: pop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-shimmer: shimmer 2.8s linear infinite;
   --animate-orbit: orbit 14s linear infinite;
+  --animate-pulse-ring: pulse-ring 3.2s ease-out infinite;
+  --animate-drift: drift 18s ease-in-out infinite;
+  --animate-ring-spin: ring-spin 26s linear infinite;
 }
 
-/* Hide the Lovable badge/icon on the site */
+@utility premium-ring {
+  background: conic-gradient(
+    from 0deg,
+    color-mix(in oklab, var(--primary) 70%, transparent),
+    transparent 35%,
+    color-mix(in oklab, var(--primary-glow) 70%, transparent) 60%,
+    transparent 85%
+  );
+}
+
+@utility num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--primary-foreground);
+  background-image: var(--gradient-brand);
+  box-shadow: var(--shadow-brand);
+  border-radius: 9999px;
+  text-shadow: 0 1px 2px oklch(0.15 0 0 / 0.45);
+}
+
+/* Hide third-party build badges (Lovable / Netlify) */
 #lovable-badge,
+[data-netlify-badge],
+a[href*="netlify.com"][target="_blank"],
+a[href*="netlify.app/badge"],
+div[class*="netlify-badge"],
 [data-lovable-badge],
 a[href*="lovable.dev"][target="_blank"],
 iframe[src*="lovable.dev/badge"] {

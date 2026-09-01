@@ -18,6 +18,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { WelcomeChime } from "@/components/site/WelcomeChime";
 import { ScrollProgress } from "@/components/site/ScrollProgress";
 import { BackToTop } from "@/components/site/BackToTop";
+import { BrightnessControl } from "@/components/site/BrightnessControl";
 
 
 function NotFoundComponent() {
@@ -141,6 +142,7 @@ function RootComponent() {
       </main>
       <Footer />
       <BackToTop />
+      <BrightnessControl />
       <Toaster />
     </QueryClientProvider>
   );

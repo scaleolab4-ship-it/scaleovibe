@@ -93,9 +93,11 @@ const services = [
 ] as const;
 
 const stats = [
+  { value: "1500+", label: "Visitors so far" },
+  { value: "60+", label: "Calls booked" },
   { value: "2+", label: "Years building" },
   { value: "AI", label: "Automation first" },
-  { value: "SaaS", label: "Product mindset" },
+  { value: "SaaS", label: "Business mindset" },
   { value: "24h", label: "Reply time" },
 ] as const;
 
@@ -103,7 +105,7 @@ const marquee = [
   "Marketing Agency",
   "AI Automation",
   "Digital Products",
-  "Physical Services",
+  "App Builder",
   "SaaS Products",
   "System Builder",
   "Business Strategy",
@@ -115,11 +117,38 @@ const workAreas = [
   ["Marketing Agency", "Offer, funnel, content and paid — a full client-getting machine, not random posts."],
   ["AI Automation", "n8n / Make / GPT workflows that handle leads, replies, reports and content."],
   ["Digital Products", "Courses, templates, notion systems and paid communities that sell while you sleep."],
-  ["Physical Services", "Local and service businesses: booking systems, follow-up flows and reviews on autopilot."],
+  ["App Builder", "Web and mobile apps shipped fast — dashboards, client portals and internal tools."],
   ["SaaS Products", "From validated idea to MVP to first paying subscribers."],
   ["System Builder", "SOPs, dashboards and automations so the business runs without you in every step."],
 ];
 
+
+const problems = [
+  [
+    "\u201cI get leads but no clients.\u201d",
+    "Your offer and follow-up are leaking. We rewrite the offer, add a 7-touch follow-up flow and script the call.",
+  ],
+  [
+    "\u201cI\u2019m doing everything manually.\u201d",
+    "We map every repeated task, then replace it with an AI workflow \u2014 leads, replies, reports and content.",
+  ],
+  [
+    "\u201cMy income stops when I stop.\u201d",
+    "We productise your service into a digital product, app or SaaS so revenue keeps running without you.",
+  ],
+  [
+    "\u201cI post daily and nothing happens.\u201d",
+    "One channel, one offer, one content engine \u2014 7 assets from every idea, measured weekly.",
+  ],
+  [
+    "\u201cClients churn after a month.\u201d",
+    "Onboarding SOPs, reporting dashboards and a results cadence that makes staying the easy choice.",
+  ],
+  [
+    "\u201cI can\u2019t build the product I want.\u201d",
+    "App Builder track: MVP shipped in weeks with real users, not a year-long build.",
+  ],
+];
 
 function Index() {
   return (
@@ -147,7 +176,7 @@ function Index() {
             style={{ animationDelay: "0.28s" }}
           >
             scaleo_vibe is a small, fast lab for marketing agency work, AI automation, digital
-            products, physical services, SaaS products and system building.
+            products, app builds, SaaS products and system building.
           </p>
 
           <div
@@ -178,7 +207,7 @@ function Index() {
           </div>
 
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.08}>
                 <div className="glass-card rounded-2xl px-4 py-5">
@@ -261,7 +290,7 @@ function Index() {
                     working across <strong className="text-foreground">marketing agency</strong>,{" "}
                     <strong className="text-foreground">AI automation</strong>,{" "}
                     <strong className="text-foreground">digital products</strong>,{" "}
-                    <strong className="text-foreground">physical services</strong>,{" "}
+                    <strong className="text-foreground">app building</strong>,{" "}
                     <strong className="text-foreground">SaaS products</strong> and{" "}
                     <strong className="text-foreground">system building</strong> — starting from AI
                     automation, then growing into full business systems. I build offers, automate the
@@ -272,7 +301,7 @@ function Index() {
                       "Marketing Agency",
                       "AI Automation",
                       "Digital Products",
-                      "Physical Services",
+                      "App Builder",
                       "SaaS",
                       "System Builder",
                     ].map((t) => (
@@ -363,6 +392,33 @@ function Index() {
         </div>
       </section>
 
+      {/* REAL PROBLEM SOLVING */}
+      <section className="relative px-4 py-20">
+        <div className="pointer-events-none absolute left-1/2 top-10 -z-10 size-[26rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[120px] animate-drift" />
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle
+            eyebrow="Real problem solving"
+            title="The problems we actually fix"
+            subtitle="Not theory. These are the exact bottlenecks founders bring to the first call."
+          />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {problems.map(([q, a], i) => (
+              <Reveal key={q} delay={i * 0.06}>
+                <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6">
+                  <span className="absolute -right-10 -top-10 size-28 rounded-full bg-primary-glow/20 blur-2xl" />
+                  <span className="num-badge relative size-9 text-sm">{i + 1}</span>
+                  <h4 className="relative mt-4 font-display text-base font-extrabold text-foreground">
+                    {q}
+                  </h4>
+                  <p className="relative mt-2 text-sm text-muted-foreground">{a}</p>
+                  <span className="pointer-events-none absolute bottom-4 right-4 size-10 rounded-full border border-primary/25 animate-pulse-ring" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* QUICK INFO */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-5xl">
@@ -378,7 +434,7 @@ function Index() {
             ].map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.06}>
                 <div className="glass-card flex gap-4 rounded-2xl p-5">
-                  <Sparkle className="mt-1 size-4 shrink-0" delay={i * 0.25} />
+                  <span className="num-badge size-8 shrink-0 text-xs">{i + 1}</span>
                   <div>
                     <h4 className="font-display font-bold">{t}</h4>
                     <p className="mt-1 text-sm text-muted-foreground">{d}</p>
