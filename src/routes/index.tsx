@@ -123,6 +123,33 @@ const workAreas = [
 ];
 
 
+const problems = [
+  [
+    "\u201cI get leads but no clients.\u201d",
+    "Your offer and follow-up are leaking. We rewrite the offer, add a 7-touch follow-up flow and script the call.",
+  ],
+  [
+    "\u201cI\u2019m doing everything manually.\u201d",
+    "We map every repeated task, then replace it with an AI workflow \u2014 leads, replies, reports and content.",
+  ],
+  [
+    "\u201cMy income stops when I stop.\u201d",
+    "We productise your service into a digital product, app or SaaS so revenue keeps running without you.",
+  ],
+  [
+    "\u201cI post daily and nothing happens.\u201d",
+    "One channel, one offer, one content engine \u2014 7 assets from every idea, measured weekly.",
+  ],
+  [
+    "\u201cClients churn after a month.\u201d",
+    "Onboarding SOPs, reporting dashboards and a results cadence that makes staying the easy choice.",
+  ],
+  [
+    "\u201cI can\u2019t build the product I want.\u201d",
+    "App Builder track: MVP shipped in weeks with real users, not a year-long build.",
+  ],
+];
+
 function Index() {
   return (
     <div className="overflow-hidden">
@@ -180,7 +207,7 @@ function Index() {
           </div>
 
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.08}>
                 <div className="glass-card rounded-2xl px-4 py-5">
@@ -365,6 +392,33 @@ function Index() {
         </div>
       </section>
 
+      {/* REAL PROBLEM SOLVING */}
+      <section className="relative px-4 py-20">
+        <div className="pointer-events-none absolute left-1/2 top-10 -z-10 size-[26rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[120px] animate-drift" />
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle
+            eyebrow="Real problem solving"
+            title="The problems we actually fix"
+            subtitle="Not theory. These are the exact bottlenecks founders bring to the first call."
+          />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {problems.map(([q, a], i) => (
+              <Reveal key={q} delay={i * 0.06}>
+                <div className="glass-card relative h-full overflow-hidden rounded-3xl p-6">
+                  <span className="absolute -right-10 -top-10 size-28 rounded-full bg-primary-glow/20 blur-2xl" />
+                  <span className="num-badge relative size-9 text-sm">{i + 1}</span>
+                  <h4 className="relative mt-4 font-display text-base font-extrabold text-foreground">
+                    {q}
+                  </h4>
+                  <p className="relative mt-2 text-sm text-muted-foreground">{a}</p>
+                  <span className="pointer-events-none absolute bottom-4 right-4 size-10 rounded-full border border-primary/25 animate-pulse-ring" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* QUICK INFO */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-5xl">
@@ -380,7 +434,7 @@ function Index() {
             ].map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.06}>
                 <div className="glass-card flex gap-4 rounded-2xl p-5">
-                  <Sparkle className="mt-1 size-4 shrink-0" delay={i * 0.25} />
+                  <span className="num-badge size-8 shrink-0 text-xs">{i + 1}</span>
                   <div>
                     <h4 className="font-display font-bold">{t}</h4>
                     <p className="mt-1 text-sm text-muted-foreground">{d}</p>
