@@ -13,6 +13,22 @@ export function WelcomeChime() {
 
     let disposed = false;
 
+    const speak = () => {
+      try {
+        const synth = window.speechSynthesis;
+        if (!synth) return;
+        synth.cancel();
+        const say = new SpeechSynthesisUtterance("Welcome to Scaleo Lab");
+        say.lang = "en-US";
+        say.rate = 0.92;
+        say.pitch = 1.05;
+        say.volume = 1;
+        window.setTimeout(() => synth.speak(say), 900);
+      } catch {
+        /* speech unsupported — chime alone is fine */
+      }
+    };
+
     const play = () => {
       if (disposed) return true;
       const Ctx =
@@ -52,6 +68,7 @@ export function WelcomeChime() {
         osc.stop(start + 1.5);
       });
 
+      speak();
       window.sessionStorage.setItem("scaleo-welcome", "1");
       window.setTimeout(() => void ctx.close(), 3000);
       return true;
